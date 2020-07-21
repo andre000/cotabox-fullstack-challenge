@@ -2,11 +2,11 @@ const Bundler = require('parcel-bundler');
 const Path = require('path');
 const nodemon = require('nodemon');
 
-const entryFiles = Path.join(__dirname, './src/server.ts');
+const entryFiles = Path.join(__dirname, './src/app.ts');
 
 const options = {
   outDir: './packages/api/dist', // O diretório de saída para construir os arquivos, dist é o padrão
-  outFile: 'server.js', // O nome do arquivo de saída
+  outFile: 'app.js', // O nome do arquivo de saída
   watch: true, // whether to watch the files and rebuild them on change, defaults to process.env.NODE_ENV !== 'production'
   cache: true, // Habilita ou desabilita o cache, true é o padrão
   cacheDir: '.cache', // O diretório de cache a ser utilizado, .cache é o padrão
@@ -26,7 +26,7 @@ const options = {
 
   process.env.NODE_ENV = 'development';
   nodemon({
-    script: './packages/api/dist/server.js',
+    script: './packages/api/dist/app.js',
     ext: 'js json'
   });
 
