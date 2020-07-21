@@ -2,7 +2,7 @@ const Bundler = require('parcel-bundler');
 const Path = require('path');
 const nodemon = require('nodemon');
 
-const entryFiles = Path.join(__dirname, './src/app.ts');
+const entryFiles = Path.join(__dirname, './src/bin/www/server.ts');
 
 const options = {
   outDir: './packages/api/dist', // O diretório de saída para construir os arquivos, dist é o padrão
