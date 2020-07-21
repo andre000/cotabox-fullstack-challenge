@@ -1,0 +1,13 @@
+
+{
+  "compilerOptions": {
+    "outDir": "./packages/api/dist",
+    "allowJs": true,
+    "target": "es6",
+    "sourceMap": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./packages/api/",
+  }
+}
