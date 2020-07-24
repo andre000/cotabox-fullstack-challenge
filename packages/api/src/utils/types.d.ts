@@ -8,6 +8,10 @@ declare module 'mongoose' {
   interface Query<T> {
     cache: (props?: cacheProps) => Query<T>
   }
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  interface DocumentQuery<T, DocType extends Document, QueryHelpers = {}> {
+    cache: (props?: cacheProps) => Query<T>
+  }
 }
 
 declare module 'redis' {
