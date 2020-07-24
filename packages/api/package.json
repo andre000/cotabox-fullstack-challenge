@@ -1,7 +1,8 @@
 {
-  "name": "cotabox-api",
-  "version": "0.1.0",
+  "name": "@cotabox-challenge/api",
+  "version": "0.0.0",
   "description": "",
+  "private": true,
   "main": "src/server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
