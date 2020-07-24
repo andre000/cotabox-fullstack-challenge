@@ -2,6 +2,7 @@
 import mongoose from 'mongoose';
 import redis from 'redis';
 import { promisify } from 'util';
+import { logger } from '..';
 
 const fnExec = mongoose.Query.prototype.exec;
 
@@ -18,14 +19,17 @@ mongoose.Query.prototype.exec = async function cachedExec(...args) {
   if (!this.useCache) return fnExec.apply(this, args);
 
   const key = JSON.stringify({ ...this.getQuery(), collection: this.mongooseCollection.name });
+
   const cacheValue = await client.hgetPromise(this.hashKey, key);
   if (cacheValue) {
     const doc = JSON.parse(cacheValue);
+    logger.debug('Using cache...');
     return Array.isArray(doc)
       ? doc.map((d) => new this.model(d))
       : new this.model(doc);
   }
 
+  logger.debug('Using mongodb...');
   const result = await fnExec.apply(this, args);
   client.hset(this.hashKey, key, JSON.stringify(result));
 
