@@ -1,5 +1,8 @@
 
 export default {
+  server: {
+    port: 3001
+  },
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
@@ -36,7 +39,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    '@/plugins/element-ui'
+    { src: '~/plugins/element-ui', ssr: false }
   ],
   /*
   ** Auto import components
