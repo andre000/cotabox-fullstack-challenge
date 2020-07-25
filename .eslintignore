@@ -1,3 +1,4 @@
 bundler.dev.js
+jest.config.js
 .eslint.js
 dist/*
