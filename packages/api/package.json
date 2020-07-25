@@ -5,7 +5,8 @@
   "private": true,
   "main": "src/server.ts",
   "scripts": {
-    "test": "jest ."
+    "test": "jest .",
+    "dev": "node bundler.dev.js"
   },
   "author": "Andre L. Adriano",
   "license": "MIT",
