@@ -1,10 +1,10 @@
 import { ApolloError } from 'apollo-server';
 import { User } from '.';
-import { IUser } from './UserTypes';
+import { IUser, IUserInput } from './UserTypes';
 import { clearCache } from '../../utils';
 
 export default {
-  async addUser(user: IUser): Promise<IUser> {
+  async addUser(user: IUserInput): Promise<IUser> {
     const isValid = await this.checkParticipation(user.participation);
     if (!isValid) throw new ApolloError('Total participation can\'t be bigger than 100', '400');
 
