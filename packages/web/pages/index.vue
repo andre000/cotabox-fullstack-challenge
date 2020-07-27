@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    // TODO
+    <h1>DATA</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
 </template>
 
@@ -9,3 +10,14 @@ import Vue from 'vue'
 
 export default Vue.extend({})
 </script>
+
+<style lang="scss" scoped>
+  @import '@/assets/scss/variables.scss';
+
+  .container {
+    background: #fff;
+    padding: 20px;
+    border-radius: $--border-radius-base;
+    min-height: calc(100% - 7.5vh);
+  }
+</style>
