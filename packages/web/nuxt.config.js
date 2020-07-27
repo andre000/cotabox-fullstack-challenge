@@ -25,7 +25,8 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap;' }
     ]
   },
   /*
@@ -39,7 +40,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    { src: '~/plugins/element-ui', ssr: false }
+    { src: '~/plugins/element-ui', ssr: true }
   ],
   /*
   ** Auto import components
@@ -50,7 +51,8 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxt/typescript-build'
+    '@nuxt/typescript-build',
+    '@nuxt/components'
   ],
   /*
   ** Nuxt.js modules
