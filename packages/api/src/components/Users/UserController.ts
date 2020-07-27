@@ -5,8 +5,8 @@ import { clearCache } from '../../utils';
 
 export default {
   async addUser(user: IUserInput): Promise<IUser> {
-    const isValid = await this.checkParticipation(user.participation);
-    if (!isValid) throw new ApolloError('Total participation can\'t be bigger than 100', '400');
+    const isValidParticipation = await this.checkParticipation(user.participation);
+    if (!isValidParticipation) throw new ApolloError('Total participation can\'t be bigger than 100', 'VALIDATION_ERROR');
 
     const newUser = new User(user);
 
