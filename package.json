@@ -5,5 +5,10 @@
     "eslint": "^7.5.0",
     "lerna": "^3.22.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "lerna run dev --stream",
+    "postinstall": "lerna exec yarn && lerna link",
+    "test": "lerna run test --stream"
+  }
 }
