@@ -26,10 +26,12 @@
     "@nuxtjs/apollo": "^4.0.1-rc.1",
     "@nuxtjs/axios": "^5.11.0",
     "@nuxtjs/toast": "^3.3.1",
+    "chart.js": "^2.9.3",
     "element-ui": "^2.13.2",
     "graphql-tag": "^2.10.4",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.13.0"
+    "nuxt": "^2.13.0",
+    "vue-chartjs": "^3.5.0"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^1.0.3",
