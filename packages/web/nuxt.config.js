@@ -59,7 +59,8 @@ export default {
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/apollo',
   ],
   /*
   ** Axios module configuration
@@ -72,5 +73,13 @@ export default {
   */
   build: {
     transpile: [/^element-ui/]
+  },
+
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'http://localhost:3000/graphql'
+      }
+    }
   }
 }
