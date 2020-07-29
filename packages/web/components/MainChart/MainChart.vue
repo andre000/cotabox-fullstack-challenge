@@ -17,9 +17,13 @@ export default Vue.extend({
 
   data: () => ({
     options: {
+      onResize () {
+        const isSmallScreen = window.screen.width <= 600
+        this.legend.position = isSmallScreen ? 'bottom' : 'right'
+      },
       maintainAspectRatio: false,
       legend: {
-        position: 'right'
+        position: window.screen.width <= 600 ? 'bottom' : 'right'
       }
     }
   }),

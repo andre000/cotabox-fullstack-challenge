@@ -9,7 +9,9 @@
           <main-table :list-users="users" />
         </el-col>
         <el-col :lg="12" :md="24">
-          <main-chart :list-users="users" />
+          <client-only>
+            <main-chart :list-users="users" />
+          </client-only>
         </el-col>
       </el-row>
     </div>
