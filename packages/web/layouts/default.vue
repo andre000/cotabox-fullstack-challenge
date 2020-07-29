@@ -31,6 +31,7 @@ export default Vue.extend({
     @media screen and (max-width: 990px) {
       .header {
         min-height: 200px !important;
+        margin: 5vh 0px !important;
       }
       align-items: flex-end;
     }
